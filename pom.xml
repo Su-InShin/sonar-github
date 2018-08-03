@@ -9,7 +9,7 @@
     <relativePath />
   </parent>
 
-  <groupId>org.sonarsource.github</groupId>
+  <groupId>io.committed</groupId>
   <artifactId>sonar-github-plugin</artifactId>
   <name>SonarQube :: GitHub Plugin</name>
   <packaging>sonar-plugin</packaging>
@@ -20,7 +20,7 @@
   
   <properties>
     <sonar.version>6.7</sonar.version>
-    <sonar.pluginName>GitHub</sonar.pluginName>
+    <sonar.pluginName>Committed GitHub</sonar.pluginName>
     <sonar.pluginClass>org.sonar.plugins.github.GitHubPlugin</sonar.pluginClass>
 
     <!-- used for deployment to SonarSource Artifactory -->
