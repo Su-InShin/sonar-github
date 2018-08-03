@@ -62,9 +62,9 @@ import org.sonar.api.PropertyType;
     type = PropertyType.BOOLEAN),
   @Property(
     key = GitHubPlugin.GITHUB_DELETE_OLD_COMMENTS,
-    defaultValue = "true",
+    defaultValue = "false",
     name = "Delete old comments",
-    description = "Old comments with no corresponding issues will not be deleted",
+    description = "Old comments with no corresponding issues will be deleted",
     project = true,
     global = true,
     type = PropertyType.BOOLEAN)
