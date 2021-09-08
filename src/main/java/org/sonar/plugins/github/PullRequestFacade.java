@@ -145,7 +145,7 @@ public class PullRequestFacade {
         existingReviewCommentsByLocationByFile.put(comment.getPath(), new HashMap<Integer, GHPullRequestReviewComment>());
       }
       // By default all previous comments will be marked for deletion
-      reviewCommentToBeDeletedById.put(comment.getId(), comment);
+      // reviewCommentToBeDeletedById.put(comment.getId(), comment);
       existingReviewCommentsByLocationByFile.get(comment.getPath()).put(comment.getPosition(), comment);
     }
   }
@@ -238,7 +238,7 @@ public class PullRequestFacade {
   public void deleteOutdatedComments() {
     for (GHPullRequestReviewComment reviewToDelete : reviewCommentToBeDeletedById.values()) {
       try {
-        reviewToDelete.delete();
+        // reviewToDelete.delete();
       } catch (IOException e) {
         throw new IllegalStateException("Unable to delete review comment with id " + reviewToDelete.getId(), e);
       }
@@ -261,7 +261,7 @@ public class PullRequestFacade {
     for (GHIssueComment comment : pr.listComments()) {
       if (myself.equals(comment.getUser().getLogin())) {
         if (markup == null || found || !markup.equals(comment.getBody())) {
-          comment.delete();
+          // comment.delete();
           continue;
         }
         if (markup.equals(comment.getBody())) {
